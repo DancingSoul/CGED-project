@@ -240,7 +240,7 @@ void readFile(string fileName, vector<Sentence> &data) {
   int lc = 0, toks = 0;
   string sentence;
   while (getline(in, sentence)) {
-    if (lc % 100 == 0) cerr << lc << endl;
+    if (lc % 1000 == 0) cerr << lc << endl;
     vector<string> words = split(sentence, ' ');
     vector<string> temp;
     temp.push_back("<SOS>");
@@ -296,7 +296,7 @@ void readEmbedding(string fileName) {
       e[i - 1] = atof(item[i].c_str());
     if (wordToIndex.find(word) != wordToIndex.end() && wordEmbeddings.find(wordToIndex[word]) == wordEmbeddings.end())
       wordEmbeddings[wordToIndex[word]] = e;
-    if (cnt % 1000 == 0) cerr << cnt << endl;
+    if (cnt % 100000 == 0) cerr << cnt << endl;
   }
 }
 
