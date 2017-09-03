@@ -197,12 +197,12 @@ struct RNNLanguageModel {
 void init_command_line(int argc, char* argv[], po::variables_map* conf) {
   po::options_description opts("LSTM-CGED");
   opts.add_options()
-    ("training_data,T", po::value<std::string>(), "The path to the training data.")
-    ("devel_data,d", po::value<std::string>(), "The path to the development data.")
+    ("training_data", po::value<std::string>(), "The path to the training data.")
+    ("devel_data", po::value<std::string>(), "The path to the development data.")
     ("testing_data", po::value<std::string>(), "The path to the testing data.")
-    ("pretrained,w", po::value<std::string>(), "The path to the pretrained bigram word embedding.")
+    ("pretrained", po::value<std::string>()->default_value(""), "The path to the pretrained bigram word embedding.")
     ("model_name", po::value<std::string>(), "The path to the model of this training phase.")
-    ("model_file", po::value<string>()->default_value(""), "The path to the model which have been trained before.")
+    ("model_file", po::value<string>()->default_value(""), "The path to the model which was trained before.")
     ("layers", po::value<int>()->default_value(1), "number of LSTM layers")
     ("bigram_dim", po::value<int>()->default_value(100), "input bigram embedding size")
     ("unigram_dim", po::value<int>()->default_value(50), "unigram dimension")
