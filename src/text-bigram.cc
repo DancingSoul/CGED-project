@@ -286,7 +286,6 @@ void readEmbedding(string fileName) {
   getline(in, line);
   int dim = atoi(split(line, ' ')[1].c_str());
   int cnt = 0;
-  WORD_EMBEDDING_DIM = dim;
   while (getline(in, line)) {
     vector<string> item = split(line, ' ');
     cnt++;
