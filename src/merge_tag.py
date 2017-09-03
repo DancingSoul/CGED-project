@@ -4,6 +4,7 @@ import sys
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
+#recover testing output of original length
 def main():
   tag_file = open(sys.argv[1], 'r')
   test_file = open(sys.argv[2], 'r') 
@@ -16,7 +17,7 @@ def main():
     l = []
     cnt = 0
     for i in range(len(test_lines)):
-      if test_lines[i] == '\n':
+      if len(test_lines[i]) <= 2:
         if cnt == 0: print '!!!'
         l.append(cnt)
         cnt = 0

@@ -4,6 +4,7 @@ import sys
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
+#seperate long sentences into short ones using delimeter "。！？"
 def main():
   input_file = open(sys.argv[1], 'r')
   output_file = open(sys.argv[2], 'w')

@@ -49,6 +49,9 @@ def wordToChar(word, pos):
       resp.append(('B-' if j == 0 else 'I-') + pos[i])
   return resw, resp
 
+  
+#Divide the data set into training set and development set.
+
 def main():
   #parser = ET.XMLParser(encoding="utf-8")
   #tree = ET.fromstring('train.xml')

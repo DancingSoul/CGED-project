@@ -1,5 +1,6 @@
 import sys
 
+#Tranform the data format.
 def main():
   crf_file = open(sys.argv[1], 'r')
   cnn_file = open(sys.argv[2], 'w')  

@@ -20,7 +20,7 @@ def main():
   segmentor.load('./cws.model')
   postagger = Postagger()
   postagger.load('./pos.model')
-  file_object = open('CGED16_HSK_Test_Input.txt', 'r')
+  file_object = open(sys.argv[1], 'r')
   sid = []
   output_list = []
   try:
@@ -57,7 +57,7 @@ def main():
   finally:
     file_object.close()
 
-  file_object = open('HSK_Test.txt', 'w')
+  file_object = open(sys.argv[2], 'w')
   negative_num = 0
   for i in range(len(output_list)):
     ff = 0
